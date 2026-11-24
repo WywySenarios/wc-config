@@ -1,0 +1,14 @@
+# In-pod root of the mounted project.
+target_home: /home/wc/workspace
+
+# First match wins.
+# Every rwx permission defaults to `false`.
+# Directories do not gate their children, so list each subtree you want to restrict.
+permissions:
+  - path: writable
+    read: true
+    write: true
+    execute: true
+  # catch all rule
+  - path: ""
+    read: true
